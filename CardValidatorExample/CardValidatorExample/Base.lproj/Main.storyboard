@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CardValidatorExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter card number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zFI-pZ-jgp">
+                                <rect key="frame" x="32" y="144" width="350" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="cic-PV-ft6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="j1G-jx-c2f"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rq-4f-gDj">
+                                <rect key="frame" x="32" y="178" width="350" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="93y-gC-06k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKe-ct-lAe">
+                                <rect key="frame" x="32" y="109" width="350" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0JK-Ux-oj9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zFI-pZ-jgp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="09w-qL-TpU"/>
+                            <constraint firstItem="vKe-ct-lAe" firstAttribute="leading" secondItem="zFI-pZ-jgp" secondAttribute="leading" id="6Xk-pj-KaC"/>
+                            <constraint firstItem="zFI-pZ-jgp" firstAttribute="top" secondItem="vKe-ct-lAe" secondAttribute="bottom" constant="5" id="B9p-Bl-DVw"/>
+                            <constraint firstItem="9rq-4f-gDj" firstAttribute="trailing" secondItem="zFI-pZ-jgp" secondAttribute="trailing" id="Bgh-l6-Ejy"/>
+                            <constraint firstItem="9rq-4f-gDj" firstAttribute="leading" secondItem="zFI-pZ-jgp" secondAttribute="leading" id="RDJ-PE-95z"/>
+                            <constraint firstItem="9rq-4f-gDj" firstAttribute="top" secondItem="zFI-pZ-jgp" secondAttribute="bottom" id="VT2-yC-IEl"/>
+                            <constraint firstItem="vKe-ct-lAe" firstAttribute="trailing" secondItem="zFI-pZ-jgp" secondAttribute="trailing" id="qx6-if-U3g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zFI-pZ-jgp" secondAttribute="trailing" constant="32" id="vcX-1B-jiD"/>
+                            <constraint firstItem="zFI-pZ-jgp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="wBi-nC-GxP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="numberBrandLabel" destination="vKe-ct-lAe" id="gIO-sk-iDH"/>
+                        <outlet property="numberErrorLabel" destination="9rq-4f-gDj" id="dRP-1I-8zv"/>
+                        <outlet property="numberTextField" destination="zFI-pZ-jgp" id="apo-oD-uqJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="121.875"/>
+        </scene>
+    </scenes>
+</document>
