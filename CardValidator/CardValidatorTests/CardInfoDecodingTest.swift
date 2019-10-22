@@ -63,9 +63,9 @@ class CardInfoDecodingTest: XCTestCase {
         XCTAssertEqual(cardInfo?.type,   "debit")
         XCTAssertEqual(cardInfo?.brand,  "Visa/Dankort")
         
-        XCTAssertEqual(cardInfo?.country.code, "DK")
+        XCTAssertEqual(cardInfo?.country?.code, "DK")
         
-        XCTAssertEqual(cardInfo?.bank.name, "Jyske Bank")
+        XCTAssertEqual(cardInfo?.bank?.name, "Jyske Bank")
     }
 
 
